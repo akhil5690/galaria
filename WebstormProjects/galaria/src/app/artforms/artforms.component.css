@@ -1,0 +1,61 @@
+.mytabs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width:80%;
+    margin:50px auto;
+    padding: 30px;
+    border: black 1px solid;
+    justify-content: center;
+    background-color: white;
+  
+} 
+.mytabs input[type="radio"] {
+    display:none;
+    
+}
+
+.mytabs label {
+    padding: 25px    ;
+    background-color: white;
+    font-weight: bold;
+    
+}
+
+.mytabs .tab{
+    width: 100%;
+    color: black;
+    padding: 25px;
+    order: 1;
+    display: none;
+    background-color: lightblue;
+}
+
+.mytabs .tab h2{
+    font-size: 2rem;
+}
+
+.mytabs input[type="radio"]:checked + label + .tab{
+    display: grid;
+    height: 500px;
+
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background-color: lightblue;
+}
+
+
+
+
+.tab{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    gap: 1rem;
+    font-size: 20px;
+    line-height: 30px;
+    height: 50%;
+    
+}
+
+

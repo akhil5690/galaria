@@ -1,0 +1,55 @@
+
+
+
+
+
+
+<div class="container">
+    <form [formGroup] = "loginForm" (ngSubmit)="loginUser()" >
+
+
+        <div class="form-group">
+            <input 
+            type="text"
+            placeholder="email"
+            formControlName="email">
+            <br>
+            <span 
+            style="color:red" 
+            *ngIf="email &&  email.invalid && email.touched ">this is not valid email</span>
+
+           
+        </div> 
+         <br>
+         <br>
+    
+        <div class="form-group">
+    
+            <input 
+            type="password" 
+            placeholder="password"
+            formControlName="password">
+            <br>
+            <span 
+            style="color:red" 
+            *ngIf="password && password.invalid && password.touched"
+            >password incorrect</span>
+            <br>
+           <a routerLink="/forgetpasswordpage">FORGET PASSWORD??</a> 
+        </div> 
+        
+        <br>
+    
+        <div>
+            <a routerLink="/main">LOGIN</a>
+            <br>
+            <br>
+            <button class="btn btn-primary" type="reset">CLEAR</button>
+            <br>
+            <h1> IF UR NEW ! <a routerLink="/registerpage">REGISTER HERE</a> </h1>
+            <br>
+        </div>
+    
+    
+    </form>
+</div>

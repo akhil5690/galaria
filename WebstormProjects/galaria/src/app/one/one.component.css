@@ -1,0 +1,43 @@
+.a{
+    display: grid;
+    grid-template-columns:1fr 1fr  ;
+    width: 83%;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+    font-size: 20px;
+
+
+
+}
+
+.a1 {
+    padding: 2rem; 
+}
+
+p{
+    line-height: 22px;
+}
+
+.a > div{
+ border: 1px solid black;
+    
+}
+
+.a2{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+
+
+.one{
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+

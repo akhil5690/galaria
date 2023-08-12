@@ -1,0 +1,30 @@
+.four-1{
+    display: grid;
+    grid-template-columns: 1fr 4fr  ;
+    padding: 1rem ;
+    text-align: center;
+    font-size: 20px;
+}
+    
+
+.four-1>div{
+    border: black solid 1px;
+    
+}
+.pad{
+    padding: 0 2rem 0 2rem;
+}
+
+.four{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:84%;
+   
+    margin:0 auto;
+    gap: 1rem;
+}
+.four > div{
+  border: 1px solid black;
+}
+
+

@@ -1,0 +1,29 @@
+.accessaries{
+    display: grid;
+    grid-template-columns:   1fr 1fr 1fr;
+    width: 50%;
+    padding:1rem;
+    gap:1rem;
+    font-size: 30px;
+    text-align: center;
+}
+
+.accessaries > div{
+  border: 1px solid black;
+  height: 3rem;
+}
+
+.productslist{
+    display: grid;
+    grid-template-columns:   1fr 1fr 1fr;
+    width: 50%;
+    padding:1rem;
+    gap:1rem;
+    font-size: 30px;
+    text-align: center;
+}
+
+.productslist > div{
+    border: 1px solid black;
+    height: 3rem;
+  }

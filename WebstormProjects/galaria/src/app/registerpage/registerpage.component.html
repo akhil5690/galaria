@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    <div class="box">
+
+        <form [formGroup]="registerForm"  (ngSubmit)="OnSubmit()">
+
+            <div class="box1">
+    
+                <div> <span>FILL UP THE DETAILS</span></div>
+        
+                <div>
+                    <input 
+                    type="text"  
+                    placeholder="NAME" 
+                    formControlName="name" 
+                    class="form-control"
+                    minlength="3"
+                    maxlength="13"
+                    pattern="(?=.*[0-9])" >
+                    <span 
+                    style="color:red" 
+                    *ngIf="name &&  name.invalid && name.touched ">Name required</span>
+
+                </div>
+                <div>
+                    <input 
+                    type="email" 
+                    placeholder="EMAIL" 
+                    formControlName="email"
+                    class="form-control">
+                    <span 
+                    style="color:red" 
+                    *ngIf="email &&  email.invalid && email.touched ">email required</span>
+                </div>
+
+                <div>
+                    <input 
+                    type="date"  
+                    name="DOB"
+                    placeholder="DATE OF BIRTH" 
+                    formControlName= "DOB"  
+                    class="form-control">
+                    <span 
+                    style="color:red" 
+                    *ngIf="DOB &&  DOB.invalid && DOB.touched ">Birthdate required</span>
+                </div>
+                <div>
+                    <input 
+                    type="pincode" 
+                    placeholder="PINCODE" 
+                    formControlName="pincode" 
+                    class="form-control"
+                    maxlength="6">
+                    <span 
+                    style="color:red" 
+                    *ngIf="pincode && pincode.invalid && pincode.touched ">  pincode required </span>
+                </div>
+                <div>
+                    <input 
+                    type="password"
+                    placeholder="PASSWORD" 
+                    formControlName="password" 
+                    class="form-control"
+                    required>                    
+                    <span 
+                    style="color:red" 
+                    *ngIf="password && password.invalid && password.touched ">password required</span>
+                </div>
+                <div>
+                    <input 
+                    type="confirmpassword" 
+                    placeholder="CONFIRM PASSWORD" 
+                    formControlName="confirmpassword"
+                    class="form-control" >
+                    <span 
+                    style="color:red" 
+                    *ngIf="confirmpassword &&  confirmpassword.invalid && confirmpassword.touched ">reconfirm password</span>
+                </div><br><br>
+                <div class="button">
+                    <div> 
+                        <button [disabled]="registerForm.invalid" type="submit"> REGISTER  </button>
+                    </div>
+                    <div>
+                        <button type="reset" (click)="clearInputMethod">CLEAR</button>
+                    </div>
+                </div>
+            </div>  
+        </form>  
+    </div>
+</body>
+</html>
